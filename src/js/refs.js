@@ -1,0 +1,16 @@
+export const refs = {
+  article: document.querySelector('#article'),
+  spanSize: document.querySelector('#size'),
+  readerTools: document.querySelector('.reader-tools'),
+  promoDiv: document.querySelector('.promo'),
+  clockSpan: document.querySelector('#clock'),
+  todaySpan: document.querySelector('#today'),
+  greetingTitle: document.querySelector('#greeting'),
+  leftSeconds: document.querySelector('#left'),
+  stayBtn: document.querySelector('#stay'),
+  stayText: document.querySelector('#redirect'),
+  messagesField: document.querySelector('#messages'),
+  undoBoxField: document.querySelector('#undo-box'),
+  undoBtn: document.querySelector('#undo'),
+  orderedInput: document.querySelector('#ordered'),
+};

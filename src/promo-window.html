@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page 3</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <load
+      src="./partials/header.html"
+      icon-path="./img/sprite.svg#logo"
+      highlight-curr="active"
+    />
+
+    <main>
+      <div class="container">
+        <h1 class="main-title">
+          <span class="main-title-gradient">Welcome</span> to promo window
+        </h1>
+        <div class="promo" hidden>
+          <p>−15% на перше замовлення за кодом HELLO15</p>
+          <label
+            ><input type="checkbox" id="never" /> Більше не показувати</label
+          >
+          <button id="close-promo">Закрити</button>
+        </div>
+        <load src="./partials/back-link.html" />
+      </div>
+    </main>
+
+    <load src="./partials/footer.html" />
+    <script type="module" src="./promo-window.js"></script>
+  </body>
+</html>
