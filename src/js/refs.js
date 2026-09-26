@@ -13,4 +13,13 @@ export const refs = {
   undoBoxField: document.querySelector('#undo-box'),
   undoBtn: document.querySelector('#undo'),
   orderedInput: document.querySelector('#ordered'),
+  notifyBtn: document.querySelector('#notify'),
+  msg: document.querySelector('#msg'),
+  label: document.querySelector('#label'),
+  loadBtn: document.querySelector('#load'),
+  loader: document.querySelector('.loader'),
+  textReport: document.querySelector('#report'),
+  profile: document.querySelector('#profile'),
+  runButton: document.querySelector('#run'),
+  log: document.querySelector('#log'),
 };

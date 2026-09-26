@@ -8,3 +8,18 @@ export function apply(size) {
 
   saveToLS(STORAGE_KEYS.FONT_SIZES, size);
 }
+
+export function delay(ms) {
+  return new Promise((res, rej) => {
+    setTimeout(res, ms);
+  });
+}
+
+export function loadReport() {
+  return new Promise((resolve, reject) => {
+    setTimeout(
+      () => (Math.random() < 0.5 ? resolve({ rows: 125 }) : reject('Error')),
+      900
+    );
+  });
+}

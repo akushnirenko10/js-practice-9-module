@@ -45,32 +45,32 @@ import { refs } from './js/refs';
 // функція не повинна псувати аргумент start, тому першим рядком робимо копію: const date = new Date(start);
 // рахувати треба не «скільки днів минуло», а «скільки робочих днів набрали». Тому лічильник зменшується лише тоді, коли черговий день виявився робочим.
 
-function addWorkdays(start, count) {
-  const date = new Date(start);
-}
+// function addWorkdays(start, count) {
+//   const date = new Date(start);
+// }
 
-// calc()
+// // calc()
 
-// Обробник, що звʼязує все з інтерфейсом: читає значення полів, виходить, якщо дата ще не обрана (порожній input[type="date"] дає порожній рядок, а new Date('') — Invalid Date), викликає addWorkdays і виводить результат у #result через toLocaleDateString.
+// // Обробник, що звʼязує все з інтерфейсом: читає значення полів, виходить, якщо дата ще не обрана (порожній input[type="date"] дає порожній рядок, а new Date('') — Invalid Date), викликає addWorkdays і виводить результат у #result через toLocaleDateString.
 
-const holidays = ['2026-01-01', '2026-03-08', '2026-08-24'];
+// const holidays = ['2026-01-01', '2026-03-08', '2026-08-24'];
 
-refs.orderedInput.addEventListener('change', onOrderedInputChange);
+// refs.orderedInput.addEventListener('change', onOrderedInputChange);
 
-function onOrderedInputChange(event) {
-  const date = new Date(event.target.value);
-  console.log(key(date));
-}
+// function onOrderedInputChange(event) {
+//   const date = new Date(event.target.value);
+//   console.log(key(date));
+// }
 
-function key(date) {
-  const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, '0');
-  const day = String(date.getDate()).padStart(2, '0');
+// function key(date) {
+//   const year = date.getFullYear();
+//   const month = String(date.getMonth() + 1).padStart(2, '0');
+//   const day = String(date.getDate()).padStart(2, '0');
 
-  return `${year}-${month}-${day}`;
-}
+//   return `${year}-${month}-${day}`;
+// }
 
-function isWorkday(date) {
-  const day = date.getDay();
-  return day !== 0 && day !== 6 && !holidays.includes(key(date));
-}
+// function isWorkday(date) {
+//   const day = date.getDay();
+//   return day !== 0 && day !== 6 && !holidays.includes(key(date));
+// }

@@ -1,5 +1,5 @@
 import { STORAGE_KEYS } from './constants';
-import { apply } from './helpers';
+import { apply, delay, loadReport } from './helpers';
 import { refs } from './refs';
 import { loadFromLS, saveToLS } from './storage';
 
@@ -39,4 +39,30 @@ export function onUndoBtnClick() {
   messagesListItem.hidden = false;
   messagesListItem = null;
   refs.undoBoxField.hidden = true;
+}
+
+export function onNotifyBtnClick() {
+  refs.notifyBtn.disabled = true;
+  refs.msg.textContent = 'Очiкуйте!';
+  delay(2000).then(() => {
+    refs.notifyBtn.disabled = false;
+    refs.msg.textContent = 'Перевiр почту';
+  });
+}
+
+export function onLoadBtnClick() {
+  refs.loader.classList.add('visible');
+  refs.loadBtn.disabled = true;
+  refs.textReport.textContent = '';
+  loadReport()
+    .then(({ rows }) => {
+      refs.textReport.textContent = `Завантажено рядкiв ${rows}`;
+    })
+    .catch(err => {
+      refs.textReport.textContent = `Помилка ${err}`;
+    })
+    .finally(() => {
+      refs.loader.classList.remove('visible');
+      refs.loadBtn.disabled = false;
+    });
 }
